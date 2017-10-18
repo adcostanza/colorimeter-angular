@@ -7,8 +7,8 @@ import 'rxjs/add/operator/map';
 export class StartService {
 	constructor(private http: HttpClient) {};
   go(): Observable<any> {
-		let token = 'YYYYYYYYYYYYYYYYYYYYY';
-    let deviceId = 'XXXXXXXXXXXXXXXX';
+		let token = 'XXXXXXXXXXXXXXXX';
+    let deviceId = 'YYYYYYYYYYYYYYYYYYYYYY';
 		let headers = { headers : new HttpHeaders().set('Content-Type', 'application/json') };
 		return this.http.post('https://api.particle.io/v1/devices/'+deviceId+'/go?access_token='+token,{'arg':' '},headers)
 			.map(response => {
